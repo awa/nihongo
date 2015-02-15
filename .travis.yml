@@ -4,15 +4,13 @@ go:
   - 1.4.1
 
 before_install:
-  - sudo pip install codecov
-
-install:
   - go get golang.org/x/tools/cmd/vet
   - go get golang.org/x/tools/cmd/cover
+  - go get github.com/mattn/goveralls
+  - go get github.com/axw/gocov/gocov
   - go get github.com/golang/lint/golint
 
 before_script:
-  - go get ./...
   - go vet ./...
   - golint ./... | xargs -r false
 
@@ -20,4 +18,4 @@ script:
   - go test -v -coverprofile=coverage.txt -covermode=count
 
 after_success:
-  - codecov
+  - $HOME/gopath/bin/goveralls -service=travis-ci
