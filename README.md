@@ -1,8 +1,8 @@
 NihonGo is japanese utility for Golang
 ====
 
-[![Build Status](http://img.shields.io/travis/dogenzaka/nihongo.svg?style=flat)](https://travis-ci.org/dogenzaka/nihongo)
-[![Coverage](http://img.shields.io/codecov/c/github/dogenzaka/nihongo.svg?style=flat)](https://codecov.io/github/dogenzaka/nihongo)
+[![Build Status](https://travis-ci.org/dogenzaka/nihongo.svg?branch=master)](https://travis-ci.org/dogenzaka/nihongo)
+[![Coverage Status](https://coveralls.io/repos/dogenzaka/nihongo/badge.svg)](https://coveralls.io/r/dogenzaka/nihongo)
 [![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/dogenzaka/nihongo/blob/master/LICENSE)
 
 NihonGo is japanese utility on Go.
