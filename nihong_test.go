@@ -63,3 +63,41 @@ func TestToKatakana(t *testing.T) {
 		t.Errorf("Not converted to Katakana %v", kana)
 	}
 }
+
+func TestContainsHiragana(t *testing.T) {
+	checkContainsHiragana(t, "テスト", false)
+	checkContainsHiragana(t, "English", false)
+	checkContainsHiragana(t, "てすと", true)
+	checkContainsHiragana(t, "テストてすと", true)
+}
+
+func TestContainsKatakana(t *testing.T) {
+	checkContainsKatakana(t, "テスト", true)
+	checkContainsKatakana(t, "English", false)
+	checkContainsKatakana(t, "てすと", false)
+	checkContainsKatakana(t, "テストてすと", true)
+}
+
+func checkContainsHiragana(t *testing.T, text string, expected bool) {
+	contains := ContainsHiragana(text)
+	if contains == expected {
+		return
+	}
+	if contains {
+		t.Errorf("ContainsHiragana detected hiragana on %v", text)
+	} else {
+		t.Errorf("ContainsHiragana did not detect hiragana on %v", text)
+	}
+}
+
+func checkContainsKatakana(t *testing.T, text string, expected bool) {
+	contains := ContainsKatakana(text)
+	if contains == expected {
+		return
+	}
+	if contains {
+		t.Errorf("ContainsKatakana detected katakana on %v", text)
+	} else {
+		t.Errorf("ContainsKatakana did not detect katakana on %v", text)
+	}
+}

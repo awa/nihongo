@@ -48,6 +48,15 @@ func TestTokenize() {
   fmt.Println(words) // ["私" "は" "人間" "です"]
 }
 
+func TestContainsHiragana() {
+  nihongo.ContainsHiragana("ひらがな") // true
+  nihongo.ContiansHiragana("日本語") // false
+}
+
+func TestContainsKatakana() {
+  nihongo.ContainsKatakana("カタカナ") // true
+  nihongo.ContiansKatakana("日本語") // false
+}
 ```
 
 License
