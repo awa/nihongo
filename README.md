@@ -1,23 +1,23 @@
-NihonGo is japanese utility for Golang
+NihonGo
 ====
 
 [![Build Status](https://travis-ci.org/dogenzaka/nihongo.svg?branch=master)](https://travis-ci.org/dogenzaka/nihongo)
 [![Coverage Status](https://coveralls.io/repos/dogenzaka/nihongo/badge.svg)](https://coveralls.io/r/dogenzaka/nihongo)
 [![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://github.com/dogenzaka/nihongo/blob/master/LICENSE)
 
-NihonGo is japanese utility on Go.
+NihonGo is an utility of Japanese text for Go language.
 
 ```
 go get github.com/dogenzaka/nihongo
 ```
 
-Featuers
+Features
 --
 
-- Katakana / Hiragana conversion
+- Converting Katakana / Hiragana
 - Unicode normalization
-- Detect katakana / hiragana string
-- Simple tokenizer ported TinySegmenter
+- Detecting Katakana / Hiragana strings in text
+- Simple Japanese tokenizer ported TinySegmenter
 
 Examples
 --
